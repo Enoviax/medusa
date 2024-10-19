@@ -1,13 +1,12 @@
 import { defineWidgetConfig } from "@medusajs/admin-sdk"
-import { Container, Heading } from "@medusajs/ui"
-import {Link} from "@medusajs/icons"
+import { Container, Heading, Copy } from "@medusajs/ui"
 
 const ProductWidget = () => {
   return (
     <Container className="divide-y p-0">
       <div className="flex items-center gap-14 px-6 py-4">
         <Heading level="h2">Product Preview/Social-share Link</Heading>
-        <Link href="/product/123" className="w-7 h-7"/>        
+        <Copy variant="default" content={`https://sharkeye.com`} className="w-8 h-8" />       
       </div>
     </Container>
   )
