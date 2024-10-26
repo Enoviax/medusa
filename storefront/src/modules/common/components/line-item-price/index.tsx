@@ -1,16 +1,20 @@
-import { clx } from "@medusajs/ui"
-
 import { getPercentageDiff } from "@lib/util/get-precentage-diff"
 import { getPricesForVariant } from "@lib/util/get-product-price"
 import { convertToLocale } from "@lib/util/money"
 import { HttpTypes } from "@medusajs/types"
+import { clx } from "@medusajs/ui"
 
 type LineItemPriceProps = {
   item: HttpTypes.StoreCartLineItem | HttpTypes.StoreOrderLineItem
   style?: "default" | "tight"
+  className?: string
 }
 
-const LineItemPrice = ({ item, style = "default" }: LineItemPriceProps) => {
+const LineItemPrice = ({
+  item,
+  style = "default",
+  className,
+}: LineItemPriceProps) => {
   const { currency_code, calculated_price_number, original_price_number } =
     getPricesForVariant(item.variant) ?? {}
 
@@ -19,12 +23,18 @@ const LineItemPrice = ({ item, style = "default" }: LineItemPriceProps) => {
     0
   )
 
-  const originalPrice = original_price_number * item.quantity
-  const currentPrice = calculated_price_number * item.quantity - adjustmentsSum
+  const originalPrice = parseFloat(original_price_number ?? "0") * item.quantity
+  const currentPrice =
+    parseFloat(calculated_price_number ?? "0") * item.quantity - adjustmentsSum
   const hasReducedPrice = currentPrice < originalPrice
 
   return (
-    <div className="flex flex-col gap-x-2 text-ui-fg-subtle items-end">
+    <div
+      className={clx(
+        "flex flex-col gap-x-2 text-ui-fg-subtle items-end",
+        className
+      )}
+    >
       <div className="text-left">
         {hasReducedPrice && (
           <>
@@ -38,7 +48,7 @@ const LineItemPrice = ({ item, style = "default" }: LineItemPriceProps) => {
               >
                 {convertToLocale({
                   amount: originalPrice,
-                  currency_code,
+                  currency_code: currency_code ?? "eur",
                 })}
               </span>
             </p>
@@ -57,7 +67,7 @@ const LineItemPrice = ({ item, style = "default" }: LineItemPriceProps) => {
         >
           {convertToLocale({
             amount: currentPrice,
-            currency_code,
+            currency_code: currency_code ?? "eur",
           })}
         </span>
       </div>
