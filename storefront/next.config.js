@@ -26,6 +26,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "admin.keensight.co.ke",
+      },
+      {
+        protocol: "https",
         hostname: "medusa-server-testing.s3.amazonaws.com",
       },
       {
