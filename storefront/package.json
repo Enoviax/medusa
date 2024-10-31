@@ -25,9 +25,9 @@
   "dependencies": {
     "@headlessui/react": "^1.6.1",
     "@hookform/error-message": "^2.0.0",
-    "@medusajs/js-sdk": "preview",
-    "@medusajs/types": "preview",
-    "@medusajs/ui": "preview",
+    "@medusajs/js-sdk": "2.0.0",
+    "@medusajs/types": "2.0.o",
+    "@medusajs/ui": "2.0.0",
     "@meilisearch/instant-meilisearch": "^0.7.1",
     "@paypal/paypal-js": "^5.0.6",
     "@paypal/react-paypal-js": "^7.8.1",
@@ -60,11 +60,11 @@
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-radix": "^2.8.0",
     "webpack": "^5"
-  },
-  "devDependencies": {
+},
+ "devDependencies": {
     "@babel/core": "^7.17.5",
-    "@medusajs/client-types": "preview",
-    "@medusajs/ui-preset": "preview",
+    "@medusajs/types": "2.0.0",
+    "@medusajs/ui-preset": "2.0.0",
     "@playwright/test": "^1.41.1",
     "@types/lodash": "^4.14.195",
     "@types/node": "17.0.21",
@@ -81,5 +81,6 @@
     "prettier": "^2.8.8",
     "tailwindcss": "^3.0.23",
     "typescript": "^5.3.2"
-  }
+}
+
 }
