@@ -6,6 +6,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import Thumbnail from "../thumbnail"
 import PreviewAddToCart from "./preview-add-to-cart"
 import PreviewPrice from "./price"
+import WhatsAppButton from "./WhatsAppButton"
 
 export default async function ProductPreview({
   product,
@@ -76,6 +77,12 @@ export default async function ProductPreview({
             </Text>
           </div>
           <PreviewAddToCart product={product} region={region} />
+        </div>
+        <div className="mt-2">
+          <WhatsAppButton 
+            product={product} 
+            price={cheapestPrice?.calculated_price}
+          />
         </div>
       </div>
     </LocalizedClientLink>

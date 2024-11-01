@@ -142,5 +142,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|favicon.ico).*)"],
+  matcher: ["/((?!api|_next/static|favicon.ico|sitemap*.xml|sitemap-products.xml|sitemap-blog.xml|robots.txt).*)"],
 }
