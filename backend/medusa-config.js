@@ -40,16 +40,16 @@ const modules = {
   },
 };
 
-// Redis configuration
-if (process.env.REDIS_URL) {
-  console.log('Redis url found, enabling event bus with redis');
-  modules[Modules.EVENT_BUS] = {
-    resolve: '@medusajs/event-bus-redis',
-    options: { 
-      redisUrl: process.env.REDIS_URL
-    }
-  };
-}
+// // Redis configuration
+// if (process.env.REDIS_URL) {
+//   console.log('Redis url found, enabling event bus with redis');
+//   modules[Modules.EVENT_BUS] = {
+//     resolve: '@medusajs/event-bus-redis',
+//     options: { 
+//       redisUrl: process.env.REDIS_URL
+//     }
+//   };
+// }
 
 // Stripe payment provider
 const stripeApiKey = process.env.STRIPE_API_KEY;
@@ -132,7 +132,7 @@ const projectConfig = {
   },
   database_url: process.env.DATABASE_URL,
   database_type: 'postgres',
-  ...(process.env.REDIS_URL && { redisUrl: process.env.REDIS_URL })
+  // ...(process.env.REDIS_URL && { redisUrl: process.env.REDIS_URL })
 };
 
 const completeConfig = {

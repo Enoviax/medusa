@@ -13,6 +13,7 @@ import MobileActions from "./mobile-actions"
 import ProductPrice from "../product-price"
 import { addToCart } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
+import WhatsAppButton from "./WhatsAppButton"
 
 type ProductActionsProps = {
   product: HttpTypes.StoreProduct
@@ -149,6 +150,11 @@ export default function ProductActions({
             ? "Out of stock"
             : "Add to cart"}
         </Button>
+        <WhatsAppButton 
+          product={product}
+          variant={selectedVariant}
+          disabled={!selectedVariant || !!disabled}
+        />
         <MobileActions
           product={product}
           variant={selectedVariant}
