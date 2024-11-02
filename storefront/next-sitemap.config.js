@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+  siteUrl: 'https://www.keensight.co.ke',
   generateRobotsTxt: true,
   sitemapSize: 7000,
   
@@ -16,11 +16,7 @@ module.exports = {
     "/register"
   ],
 
-  // Add these as static pages that should always be in the sitemap
-  additionalSitemaps: [
-    `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap-products.xml`,
-    `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap-blog.xml`,
-  ],
+  
 
   // Add all the pages that should be included in the sitemap
   additionalPaths: async (config) => {
