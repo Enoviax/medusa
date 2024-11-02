@@ -1,9 +1,6 @@
 # *
 User-agent: *
 Allow: /
-
-# *
-User-agent: *
 Disallow: /checkout
 Disallow: /account/*
 Disallow: /admin/*
@@ -18,5 +15,3 @@ Host: http://localhost:8000
 
 # Sitemaps
 Sitemap: http://localhost:8000/sitemap.xml
-Sitemap: http://localhost:8000/sitemap-products.xml
-Sitemap: http://localhost:8000/sitemap-blog.xml

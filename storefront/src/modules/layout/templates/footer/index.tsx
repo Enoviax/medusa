@@ -110,18 +110,18 @@ export default async function Footer() {
               <span className="txt-small-plus txt-ui-fg-base">Contuct Us</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <a href="/#" className="hover:text-ui-fg-base">
+                  <a href="/contact" className="hover:text-ui-fg-base">
                     Location
                   </a>
                 </li>
                 <li>
-                  <a href="/#" className="hover:text-ui-fg-base">
+                  <a href="/contact" className="hover:text-ui-fg-base">
                     Contact
                   </a>
                 </li>
                 <li>
-                  <a href="/#" className="hover:text-ui-fg-base">
-                    Others
+                  <a href="/about" className="hover:text-ui-fg-base">
+                    About Us
                   </a>
                 </li>
               </ul>
