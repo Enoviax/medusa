@@ -7,6 +7,7 @@ import Thumbnail from "../thumbnail"
 import PreviewAddToCart from "./preview-add-to-cart"
 import PreviewPrice from "./price"
 import WhatsAppButton from "./WhatsAppButton"
+import CallButton from "./CallButton"
 
 export default async function ProductPreview({
   product,
@@ -82,6 +83,11 @@ export default async function ProductPreview({
           <WhatsAppButton 
             product={product} 
             price={cheapestPrice?.calculated_price}
+          />
+        </div>
+        <div className="">
+          <CallButton 
+            product={product} 
           />
         </div>
       </div>
