@@ -11,7 +11,7 @@ Disallow: /login
 Disallow: /register
 
 # Host
-Host: http://localhost:8000
+Host: https://www.keensight.co.ke
 
 # Sitemaps
-Sitemap: http://localhost:8000/sitemap.xml
+Sitemap: https://www.keensight.co.ke/sitemap.xml
