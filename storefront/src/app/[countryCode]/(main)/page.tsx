@@ -12,7 +12,7 @@ import { listCategories } from "@lib/data/categories"
 export const metadata: Metadata = {
   title: "Keensight - Professional Security Systems & CCTV Solutions",
   description: "Leading provider of comprehensive security solutions including CCTV cameras, access control systems, electric fencing, dashboard cameras, and smart locks. Enhance your home and business security with our professional installation services.",
-  keywords: "CCTV cameras, security cameras, access control systems, electric fencing, dashboard cameras, smart locks, home security systems, business security solutions, security installation, video surveillance, door access control, security monitoring, Keensight security, commercial security systems, residential security systems",
+  keywords: "CCTV cameras, Keensight, Keensight, keensight, keensight security, security cameras, access control systems, electric fencing, dashboard cameras, smart locks, home security systems, business security solutions, security installation, video surveillance, door access control, security monitoring, Keensight security, commercial security systems, residential security systems",
   authors: [{ name: "Keensight" }],
   openGraph: {
     type: 'website',

@@ -6,7 +6,7 @@ import NextJs from "../../../common/icons/nextjs"
 const MedusaCTA = () => {
   return (
     <Text className="flex gap-x-2 txt-compact-small-plus items-center">
-      Built by Lenox using{" "}
+      Built by <a href="tel:+254704547151" className="text-blue-600 hover:text-blue-800 font-medium">Lenox</a> using{" "}
       <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
         <Medusa fill="#9ca3af" className="fill-[#9ca3af]" />
       </a>
